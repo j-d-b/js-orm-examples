@@ -1,0 +1,18 @@
+{
+  "name": "js-orm-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "j-d-b <jacob@jdbrady.info>",
+  "license": "MIT",
+  "scripts": {
+    "sequelize": "node sequelize-test",
+    "knex": "node knex-bookshelf-test"
+  },
+  "dependencies": {
+    "bookshelf": "^0.13.3",
+    "knex": "^0.15.2",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  }
+}
