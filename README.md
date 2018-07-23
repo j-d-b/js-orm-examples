@@ -6,6 +6,7 @@ I couldn't decide on an ORM/query builder until I gave a couple top contenders, 
 * print the response database user object
 
 ## Usage
+### Setup MariaDB Database
 Install MariaDB with homebrew (macOS)
 ```
 brew install mariadb
@@ -32,6 +33,7 @@ Log out
 exit
 ```
 
+### Run the examples
 Install dependencies
 ```
 yarn install
