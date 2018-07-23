@@ -19,7 +19,7 @@ const bookshelf = require('bookshelf')(knex);
 // create the `users` table, add
 const runTest = async () => {
   await knex.schema.createTable('users', (table) => {
-    table.string('email').unique('email').primary();
+    table.string('email').unique().primary();
     table.string('password').notNullable();
     table.string('name').notNullable();
     table.enu('role', ['CUSTOMER', 'OPERATOR', 'ADMIN']).notNullable().defaultTo('CUSTOMER');
