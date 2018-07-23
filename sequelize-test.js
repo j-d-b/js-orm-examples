@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 // should come from env variables
 const sequelize = new Sequelize({
   database: 'test_db_2',
-  username: 'root',
+  username: 'bctc-tas',
   password: null,
   dialect: 'mysql'
 });
@@ -17,7 +17,7 @@ const User = sequelize.define('user', {
   },
   password: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
   },
   name: {
     type: Sequelize.STRING,
@@ -40,7 +40,7 @@ const runTest = async () => {
   await User.sync({ force: true }); // add users table, this is a bit unclear
   console.log(chalk.yellow('`users` table created'));
 
-  User.create({ name: 'Robert Frost', email: 'robert@gmail.com', 'password': '123456' }).then(async () => {
+  User.create({ name: 'Robert Frost', email: 'robert@gmail.com', password: '123456' }).then(async () => {
     console.log(chalk.yellow('robert created'));
     const robert = await User.findOne({ where: { email: 'robert@gmail.com' } });
     console.log(robert);
